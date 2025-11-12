@@ -1,0 +1,55 @@
+11/11/2025
+## react intro
+
+    What is React?
+
+    1) React is a JavaScript library (not a framework) developed by Facebook (Meta) for building user interfaces (UIs), especially Single Page Applications (SPAs).
+
+    2) It helps developers build reusable UI components that update efficiently when data changes.
+
+    Instead of reloading a whole webpage when something changes, React updates only the parts of the UI that need to change.
+
+    -------
+    Why do we need React?
+
+	It makes UI development faster, cleaner, and more efficient.
+
+	Provides a better user experience with smooth updates without page reloads.
+
+## structure
+
+12/11/2025
+
+## props
+
+    Props is nothing but drilling data from parent component to child component.
+
+        Props decleration
+        destructuring props
+
+## conditional rendering 
+
+    conditional rendering means showing or hiding parts of UI based
+    on some conditions...
+
+        ternary operator
+        Logical operator
+
+## List rendering
+
+    Rendering multiole items dynamically using() .map()...
+
+## useState()
+
+    useState is a react hook that allows you to add state to a functional component.
+
+    normally in js , variables disappear aftr the function  runs.but withh useState
+    ,react remembers values between re-rendering.
+
+    syntex:
+
+        const[state,setState]=useState(initial_state)
+
+        state-- the current value of the state variables.
+        setState--  a function that function that updates the state
+        initial_state-- the statring value of the state. 
