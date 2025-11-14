@@ -39,6 +39,8 @@
 
     Rendering multiole items dynamically using() .map()...
 
+13/11/2025
+
 ## useState()
 
     useState is a react hook that allows you to add state to a functional component.
@@ -53,3 +55,34 @@
         state-- the current value of the state variables.
         setState--  a function that function that updates the state
         initial_state-- the statring value of the state. 
+
+14/11/2025
+
+## styleing in react
+
+        Global style -- index.css,app.css
+        External style
+        inline style
+        module style
+        objectWay style
+
+## useEffect()
+
+    in react ,useEffect is a hook that lets you perform 
+    side effect in functional component. 
+
+    side effect are task that happen outside the normal 
+    react rendering process ,like:
+
+        # fetching data from API 
+        # Updatind the browser DOM manually
+        # starting / stoping  timers.
+
+    useEffect(()=>{
+        //code
+    },[dependencies,dependencies2,dependencies3.....])
+
+    if that dependencies is empety useEffect will execute 
+    initialy one time.
+
+

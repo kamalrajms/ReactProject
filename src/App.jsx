@@ -8,17 +8,19 @@ import DarkMode from "./Component/DarkMode";
 import Form from "./Component/Form";
 import UserForm from "./Component/UserForm";
 import RegisterForm from "./Component/RegisterForm";
+import UseEffect from "./Component/UseEffect";
 
 export default function App() {
   const name = "Praveen kumar uigfuwgu";
   const [user, setUser] = useState(true);
   return (
     <div>
+      <UseEffect />
       <RegisterForm />
       <UserForm />
       <Form />
       <DarkMode />
-      <h3>Hello everyone...!</h3>
+      <h3 className="Hello">Hello everyone...!</h3>
       <p>Hi..{name}</p>
       <UseStateEx2 />
       <Greeting firstName={name} />

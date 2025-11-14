@@ -1,0 +1,18 @@
+.Hello {
+  color: yellow;
+  /* background: #000; */
+}
+
+.register {
+  padding: 50px;
+  color: blue;
+  background-color: bisque;
+}
+.form > h2 {
+  background-color: yellowgreen;
+}
+.list {
+  padding: 200px;
+  margin: 500px;
+  background: #000;
+}
