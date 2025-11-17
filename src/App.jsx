@@ -9,12 +9,18 @@ import Form from "./Component/Form";
 import UserForm from "./Component/UserForm";
 import RegisterForm from "./Component/RegisterForm";
 import UseEffect from "./Component/UseEffect";
+import UseEffectTimer from "./Component/UseEffectTimer";
+import UseEffectAIP from "./Component/UseEffectAIP";
+import UserefHook from "./Component/UserefHook";
 
 export default function App() {
   const name = "Praveen kumar uigfuwgu";
   const [user, setUser] = useState(true);
   return (
     <div>
+      <UserefHook />
+      <UseEffectAIP />
+      <UseEffectTimer />
       <UseEffect />
       <RegisterForm />
       <UserForm />

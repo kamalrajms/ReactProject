@@ -85,4 +85,14 @@
     if that dependencies is empety useEffect will execute 
     initialy one time.
 
+## useRef()
+
+    useRef is a react hook that gives you a box (.current) you can store anything in 
+    number, string, object,function,even DOM element.
+
+    That value  Persists between  rendering
+
+    Updating it does not cause your component to re-rendering
+
+    
 

@@ -4,7 +4,7 @@ export default function UseEffect() {
   const [count, setCount] = useState(0);
   useEffect(() => {
     console.log("component mounted");
-  }, [count]);
+  }, []);
 
   useEffect(() => {
     if (count < 5) {
