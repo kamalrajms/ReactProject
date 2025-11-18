@@ -16,16 +16,17 @@ import First from "./Context/First";
 
 export const Pass = createContext();
 
-export const Theme = createContext();
+// export const Theme = createContext();
 
 export default function App() {
   const name = "Praveen kumar uigfuwgu";
   const [user, setUser] = useState(true);
 
-  //usecontext eg 2
 
-  const [mode, setMode] = useState("light");
-  const data = { name: "praveen" };
+//usecontext eg 2
+
+   const[mode,setMode]=useState("light")
+   const data={name:"praveen"}
   return (
     <div>
       <nav className="border">
