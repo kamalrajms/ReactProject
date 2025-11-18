@@ -96,3 +96,16 @@
 
     
 
+## useContext()
+
+    Passing data from a parent component  down to deeply nested child component is annoying.
+
+    Normally , you'd have to pass props manually through each level (called props)
+
+    useContext lets you skip all the middle components and share data directly.
+
+
+            Create a context
+            Provide a value
+            Consume the value
+            

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, createContext } from "react";
 import Greeting from "./Greeting";
 import ConditionalRendering from "./Component/ConditionalRendering";
 import ListRendering from "./Component/ListRendering";
@@ -12,12 +12,29 @@ import UseEffect from "./Component/UseEffect";
 import UseEffectTimer from "./Component/UseEffectTimer";
 import UseEffectAIP from "./Component/UseEffectAIP";
 import UserefHook from "./Component/UserefHook";
+import First from "./Context/First";
+
+export const Pass = createContext();
+
+export const Theme = createContext();
 
 export default function App() {
   const name = "Praveen kumar uigfuwgu";
   const [user, setUser] = useState(true);
+
+  //usecontext eg 2
+
+  const [mode, setMode] = useState("light");
+  const data = { name: "praveen" };
   return (
     <div>
+      <nav className="border">
+        App component
+        <Pass.Provider value={name}>
+          <First />
+        </Pass.Provider>
+      </nav>
+
       <UserefHook />
       <UseEffectAIP />
       <UseEffectTimer />

@@ -17,6 +17,22 @@ export default function UserefHook() {
     return () => clearInterval(intervalRef.current);
   }, []);
 
+  // eg3
+
+  const [newProductImg, setNewProductImage] = useState(true);
+  const [imgeURL, setImageURL] = useState("");
+  const imgRef = useRef(0);
+
+  const handleImg = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const preview = URL.createObjectURL(file);
+      setImageURL(preview);
+      setNewProductImage(false);
+    }
+  };
+  // console.log(imgeURL);
+
   return (
     <div>
       {/* eg1 */}
@@ -29,6 +45,19 @@ export default function UserefHook() {
         <p>Timer : {sec}</p>
         <button onClick={() => clearInterval(intervalRef.current)}>stop</button>
       </nav>
+      {/* eg3 */}
+      <input type="file" ref={imgRef} hidden onChange={handleImg} />
+      {newProductImg ? (
+        <div className="img-box" onClick={() => imgRef.current.click()}>
+          Update Image
+        </div>
+      ) : (
+        <img
+          className="img-box2"
+          onClick={() => imgRef.current.click()}
+          src={imgeURL}
+        />
+      )}
     </div>
   );
 }
