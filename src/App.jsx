@@ -13,25 +13,28 @@ import UseEffectTimer from "./Component/UseEffectTimer";
 import UseEffectAIP from "./Component/UseEffectAIP";
 import UserefHook from "./Component/UserefHook";
 import First from "./Context/First";
+import UseReducerHook from "./Component/UseReducerHook";
+import UsereducerHookForm from "./Component/UsereducerHookForm";
 
 export const Pass = createContext();
 
 // export const Theme = createContext();
 
 export default function App() {
-  const name = "Praveen kumar uigfuwgu";
+  const name = "Praveen kumar ";
   const [user, setUser] = useState(true);
 
+  //usecontext eg 2
 
-//usecontext eg 2
-
-   const[mode,setMode]=useState("light")
-   const data={name:"praveen"}
+  const [mode, setMode] = useState("light");
+  const data = { name: "praveen" };
   return (
     <div>
+      <UsereducerHookForm/>
+      <UseReducerHook />
       <nav className="border">
         App component
-        <Pass.Provider value={name}>
+        <Pass.Provider value={{ mode, setMode, data }}>
           <First />
         </Pass.Provider>
       </nav>
