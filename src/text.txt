@@ -1,3 +1,15 @@
+.com-- commercial
+.org-- organization
+.net-- ntwork
+.edu-- 
+.gov--
+.mil-- military
+.co--company
+.info-- infomation
+.biz-- business
+.in--india
+
+
 11/11/2025
 ## react intro
 
@@ -125,4 +137,26 @@ syntex:
     dispatch(action)--a function to tell the reducer a new state
     reducerFunction(state,action)-- the logic that return a new state
     initial_state-starting value
+
+28/11/2025
+
+## usecallBack()
+
+    Every time a component re-renders,
+    it create a brand -new copy of functional inside it.
+
+    even if the function 's code looks exectaly the same,
+    React sees it as different because it's a new object in memeory.
+
+
+    syntex:
+
+    const variable_name=usecallBack(()=>{
+            // code here
+    },[dependencies,decleration1,dependencies2...])
+
+## useId()
+
+    useId() is a react hook that creates a unique and stable ID
+    for each component instance.
     

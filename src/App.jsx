@@ -15,6 +15,8 @@ import UserefHook from "./Component/UserefHook";
 import First from "./Context/First";
 import UseReducerHook from "./Component/UseReducerHook";
 import UsereducerHookForm from "./Component/UsereducerHookForm";
+import Usecallback from "./Component/Usecallback";
+import UseIdHook from "./Component/UseIdHook";
 
 export const Pass = createContext();
 
@@ -30,7 +32,11 @@ export default function App() {
   const data = { name: "praveen" };
   return (
     <div>
-      <UsereducerHookForm/>
+      <UseIdHook />
+      <UseIdHook />
+      <UseIdHook />
+      <Usecallback />
+      <UsereducerHookForm />
       <UseReducerHook />
       <nav className="border">
         App component
