@@ -17,6 +17,13 @@ import UseReducerHook from "./Component/UseReducerHook";
 import UsereducerHookForm from "./Component/UsereducerHookForm";
 import Usecallback from "./Component/Usecallback";
 import UseIdHook from "./Component/UseIdHook";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import Home from "./Routing/Home";
+import About from "./Routing/About";
+import Contact from "./Routing/Contact";
+import Service from "./Routing/Service";
+import WebDev from "./Routing/WebDev";
+import AppDev from "./Routing/AppDev";
 
 export const Pass = createContext();
 
@@ -30,37 +37,59 @@ export default function App() {
 
   const [mode, setMode] = useState("light");
   const data = { name: "praveen" };
+  const hidden = false;
   return (
     <div>
-      <UseIdHook />
-      <UseIdHook />
-      <UseIdHook />
-      <Usecallback />
-      <UsereducerHookForm />
-      <UseReducerHook />
-      <nav className="border">
-        App component
-        <Pass.Provider value={{ mode, setMode, data }}>
-          <First />
-        </Pass.Provider>
-      </nav>
+      {hidden && (
+        <div>
+          <UseIdHook />
+          <UseIdHook />
+          <UseIdHook />
+          <Usecallback />
+          <UsereducerHookForm />
+          <UseReducerHook />
+          <nav className="border">
+            App component
+            <Pass.Provider value={{ mode, setMode, data }}>
+              <First />
+            </Pass.Provider>
+          </nav>
 
-      <UserefHook />
-      <UseEffectAIP />
-      <UseEffectTimer />
-      <UseEffect />
-      <RegisterForm />
-      <UserForm />
-      <Form />
-      <DarkMode />
-      <h3 className="Hello">Hello everyone...!</h3>
-      <p>Hi..{name}</p>
-      <UseStateEx2 />
-      <Greeting firstName={name} />
-      {user ? <ConditionalRendering /> : <ListRendering />}
-      <button onClick={() => setUser(!user)}>user</button>
+          <UserefHook />
+          <UseEffectAIP />
+          <UseEffectTimer />
+          <UseEffect />
+          <RegisterForm />
+          <UserForm />
+          <Form />
+          <DarkMode />
+          <h3 className="Hello">Hello everyone...!</h3>
+          <p>Hi..{name}</p>
+          <UseStateEx2 />
+          <Greeting firstName={name} />
+          {user ? <ConditionalRendering /> : <ListRendering />}
+          <button onClick={() => setUser(!user)}>user</button>
 
-      <UseStateHook />
+          <UseStateHook />
+        </div>
+      )}
+      <BrowserRouter>
+        <div className="header">
+          <Link to={"/"}>Home</Link>
+          <Link to={"/About"}>About</Link>
+          <Link to={"/Contact"}>Contact</Link>
+          <Link to={"/Service"}>Service</Link>
+        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Service" element={<Service />}>
+            <Route path="" element={<WebDev />} />
+            <Route path="AppDevelopment" element={<AppDev />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

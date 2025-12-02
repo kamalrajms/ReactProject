@@ -159,4 +159,35 @@ syntex:
 
     useId() is a react hook that creates a unique and stable ID
     for each component instance.
-    
+
+2/12/2025
+
+## routing in react
+
+    Routing means navigation between different pages in aweb app without 
+    refrehing the browser.
+    In traditional webSites ,clicking a link reloads the whole application.
+    In react (SAP) ,routing lets us changes the viwe without reloading.
+
+        better performance.
+        Smooth user experience.
+        control over navigation without server request.
+
+
+    comment: npm install react-router-dom
+
+    <BrowserRouter>
+    <Routes>
+     <Route path="" element={<Home/>}/>
+     <Route path="" element={<about/>}/>
+     <Route path="" element={<Component/>}/>
+     <Route path="" element={<Component/>}/>
+    </Routes>
+    </BrowserRouter>
+
+    Nested routing
+
+## useNavigate()
+
+    useNavigate is from routing-dom .
+    it helps to navigate b/w component or pages .
