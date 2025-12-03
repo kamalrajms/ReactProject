@@ -191,3 +191,32 @@ syntex:
 
     useNavigate is from routing-dom .
     it helps to navigate b/w component or pages .
+
+3/12/2025
+
+ ## Useparam() -- routing dom
+
+        useParams() is a React Router hook that lets you read dynamic values from the URL path (not from the query string).
+
+		It’s commonly used when you have routes with dynamic segments like /users/:id or /products/:productId.
+
+## useActionStateHook()
+
+    useActionStateHook is a react hook used to track and  manage the state of asynchronous action
+    -like submitting a from or performing an operator -- without manually writing a lot of
+    useState and useEffect logic.
+
+            helps in
+                the pending (loading) state
+                the result (successs or failure) state
+                the error (if the action throws an execeptaion)
+
+    synt:
+        const [state,formActon,isPending]=useActionStateHook(action,initial_state)
+
+        action-- a function that perform the asyn work (like form submitting data)
+        initial_state-- the starting value of your state (null or {})
+
+        state--result (or error) returned fromm the action.
+        formActon-- function you can   or use in a form  action attribute.
+        isPending -- boolean that teels if the action is currently running.
