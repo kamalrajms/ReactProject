@@ -56,3 +56,26 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.chatApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat {
+  width: 40%;
+  border: 5px solid black;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: blueviolet;
+  flex-direction: column;
+}
+.chat > textarea,
+.chat > input,
+.chat > button {
+  width: 100%;
+  padding: 8px;
+}
