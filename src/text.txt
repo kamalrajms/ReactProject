@@ -226,3 +226,20 @@ syntex:
 ## chat box with delay button
 
 ## API integration
+
+5/12/2025
+
+## xo Game
+
+## Custom hook in react
+
+    A Custom hook is a Resuable Function in react that contains logic using 
+    hooks (like : useState,useEffect...)
+
+    It allows you to share and reuse stateful logic betweeen multiple components
+    without repeating code.
+
+    The name of a Custom hook  must statr with  use , such  as useFeatch or useLocalStorage.
+
+
+    thank you....
